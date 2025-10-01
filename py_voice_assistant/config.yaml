@@ -1,0 +1,27 @@
+# Assistant configuration
+assistant_name: "Nova"
+wake_word_enabled: false           # set true if integrating a wakeword engine
+wake_word: "hey nova"
+push_to_talk: true                 # press Enter to start/stop listening
+
+asr:
+  engine: "speech_recognition"     # "speech_recognition" or "vosk"
+  language: "en-US"
+  vosk_model_path: ""              # e.g., C:/models/vosk-model-small-en-us-0.15
+
+tts:
+  rate: 180                        # words per minute
+  volume: 1.0                      # 0.0 - 1.0
+  voice_id: null                   # pick default; set to a specific id if you want
+
+scheduler:
+  timezone: "local"                # "local" or an IANA tz (e.g., Asia/Karachi)
+  store: "memory"                  # memory only; switch to sqlite if you want persistence
+
+enabled_skills:
+  - "time_date"
+  - "open_site"
+  - "search_web"
+  - "notes"
+  - "reminders"
+  - "system"
